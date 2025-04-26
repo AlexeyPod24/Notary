@@ -1,0 +1,572 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  /* Colors */
+  --primary-color: #2B2B2B;         /* Charcoal for text/buttons */
+  --accent-gold: #A88C56;           /* Rich gold for accents */
+  --soft-gold: #c5a76a6c;             /* Used for hover */
+  --background-light: #F4F4F4;      /* Main background */
+  --white: #ffffff;
+  --gray-border: #ccc;
+
+  /* Fonts */
+  --heading-font: 'Playfair Display', serif;
+  --body-font: 'Poppins', sans-serif;
+
+  /* Spacing (optional) */
+  --section-padding: 80px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    body, html {
+    min-width: 100%;
+    min-height: 100vh;
+    font-family: var(--body-font);
+    scroll-behavior: smooth;
+   
+    }
+    
+   img {
+          max-width: 100%;
+          height: auto;
+      vertical-align: middle;
+      font-style: italic;
+      background-repeat: no-repeat;
+      background-size: cover;
+      }
+
+      
+    
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+  
+
+      .logo {
+        width: 6%;
+      }
+
+      nav {
+        position: sticky;
+
+        top: 0;
+        width: 100%;
+        background-color: var(--white);
+        /* border-bottom: 1px solid var(--primary-color); */
+    
+
+      }
+
+
+
+      nav ul {
+        list-style-type: none;
+        display: flex;
+      }
+      
+      nav .home-li {
+        margin-right: auto;
+      }
+
+      nav a {
+        display: flex;
+        text-decoration: none;
+        color: var(--primary-color);
+        padding: 1em 2em;
+        transition: ease-in-out .2s;
+        font-size: 1.2rem;
+      }
+
+      nav a:hover {
+        background-color: var(--soft-gold);
+        color: var(--primary-color);
+        transition: ease-in-out .2s;
+      }
+
+      nav a.active-link {
+        border-bottom: 3px solid var(--primary-color);
+      }
+/* We include display flex on nav li here so that there is no gap between active LINK and background color, that is how I solve this */
+      nav li {
+        display: flex;
+      }
+
+      
+   
+
+      section {
+        width: 100%;
+        padding: 4rem 1rem;
+        background-color: var(--background-light);
+        
+       
+      }
+
+      .section-flex-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+#services {
+  margin-top: 5rem;
+}
+      .all-services-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 4rem;
+        flex-wrap: wrap;
+        padding: 2rem;
+        
+  
+      }
+      .individual-service-container {
+        display: flex;
+        flex-direction: column;
+       justify-content: flex-start;
+      align-items: center;
+      background-color: white;
+      width: 40%;
+      text-align: left;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      padding: 2rem;
+      border-radius: 30px;
+
+}
+
+.individual-service-container:hover {
+
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2),
+  0 0 10px rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+
+
+
+
+      .white-bg {
+        background-color: var(--white);
+      }
+
+      .individual-service-container_title {
+        padding: 1.5rem 0;
+      }
+      .individual-service-container_description {
+        font-size: 1.2rem;
+        line-height: 1.5;
+      }
+
+
+.whyus-container {
+  display: flex;
+  margin-top: 3rem;
+  width: 100%;
+
+  padding: 6rem 2rem;
+  justify-content: space-around;
+  background-color: var(--background-light);
+  align-items: center;
+}
+
+
+.whyus-img {
+ 
+  width: 40rem;
+  min-width: 10rem;
+  border-radius: 30px;
+  
+}
+
+.whyus-general {
+  width: 45%;
+}
+
+.whyus-right {
+  width: 40rem;
+  border-radius: 30px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1)
+}
+
+.whyus-left li {
+
+  font-size: 1.2rem;
+  list-style: none;
+  background-color: hsl(0, 0%, 100%);
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 30px;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  
+}
+
+.whyus-left li:hover {
+
+        transform: scale(1.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+                    0 0 10px rgba(255, 255, 255, 0.5); /* light glow */        
+      }
+
+
+
+strong  {
+  font-size: 1.5rem;
+}
+
+.whyus-paragraph-text {
+  font-size: 1.2rem;
+}
+
+#reviews {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: hsla(40, 32%, 50%, 0.205);
+  
+}
+
+.reviews-individual-container {
+  width: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+
+}
+
+.review-photo {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50px;
+  background-size: cover;
+  background-position: 50% 10%;
+}
+
+.review-photo-one {
+  background-image: url(port3-p-500.jpg);
+}
+.review-photo-two {
+  background-image: url(port4-p-500.jpg);
+}
+.review-photo-three {
+  background-image: url(port6-p-500.jpg);
+}
+.review-photo-four {
+  background-image: url(port7-p-500.jpg);
+}
+
+
+#contact {
+  padding-bottom: 8rem;
+}
+.contact-general {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding-top: 6rem;
+}
+
+
+
+.contact-left {
+  width: 40%;
+ 
+  
+}
+
+.contact-left img {
+  width: 30rem;
+  border-radius: 50px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: 50% 10%;
+  
+}
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  
+}
+
+.contact-right h2 {
+  padding: 0;
+}
+
+
+
+.contact-info {
+  padding-top: 2rem;
+}
+
+.contact-email {
+  padding-bottom: .5rem;
+  font-weight: 700;
+}
+
+.contact-phone {
+  padding: .5rem 0;
+  font-weight: 700;
+}
+
+.contact-phone a {
+  font-weight: 400;
+}
+
+.email-span {
+  background-color: none;
+  font-weight: 400;
+}
+
+.opening-hours {
+  font-weight: 700;
+  padding-bottom: .5rem;
+}
+/* 12rem */
+      .hero-image {
+        width: clamp(15rem, 25%, 40rem);
+        min-width: 15rem;
+        object-fit: cover;
+        border-radius: 50px;
+       transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+
+      .hero-image:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+                    0 0 10px rgba(255, 255, 255, 0.5); /* light glow */
+        
+      }
+
+      .hero-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+      }
+
+    
+      
+      .hero {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 0 6rem;
+      }
+
+      .two {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 4rem;
+      
+      }
+
+      h1 {
+        font-size: clamp(3rem, 5vw, 10rem);
+        font-family: var(--heading-font);
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+      }
+
+      h2 {
+        font-size: clamp(1.5rem, 4vw, 3rem);
+        font-family: var(--heading-font);
+        color: var(--primary-color);
+        padding: 1rem 0;
+      }
+
+      h3 {
+        font-size: clamp(1rem, 1.2vw, 3rem);
+        font-family: var(--heading-font);
+        
+      }
+
+      li {
+        font-size: 1.5rem;
+      }
+
+      .span-header  {
+        display: inline-block;
+        padding: 0 .5rem .5rem 1rem;
+        background-color: var(--soft-gold);
+      border-radius: 30px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 1.5rem 2rem;
+        background-color: #2B2B2B;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        transition: background 0.3s;
+        border-radius: 10px;
+    }
+
+    .btn:hover {
+      background-color: var(--soft-gold);
+      color: var(--primary-color);
+  }
+
+  .accent-line {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--accent-gold); /* deeper gold for visibility */
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    letter-spacing: 1px;
+    margin: 2rem 0 4rem 0;
+}
+
+.hero-paragraph {
+  font-family: 'Open Sans', sans-serif;
+  font-size: clamp(1.4rem, 1.5vw, 3rem);
+  color: var(--primary-color);
+}
+
+#open-sidebar-button, #close-sidebar-button {
+  display: none;
+}
+
+#overlay {
+  display: none;
+position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+  inset: 0;
+}
+
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-light);
+  border-top: 1px solid var(--primary-color);
+  padding-bottom: 2rem;
+}
+
+.footer-links {
+  width: 100%;
+}
+
+.footer-links ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 4rem;
+}
+
+.footer-links li {
+  list-style-type: none;
+  font-size: 1.2rem;
+}
+
+
+.footer-logo  {
+  width: 6rem;
+}
+
+.footer-contact {
+  width: 100%;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 700px) {
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: min(15em, 100%);
+    z-index: 10;
+    border-left: 1px solid var(--primary-color);
+    transition: right 300ms ease-out;
+  }
+
+ 
+
+/* We control the opening and closing of the mobile menu with nav.show. Its at -100% by default, when we show this class it puts it back at 0 */
+  nav.show {
+    right: 0;
+  }
+
+  nav.show ~ #overlay {
+    display: block;
+  }
+
+  nav ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  nav a {
+    width: 100%;
+    padding-left: 2.5em;
+  }
+
+  nav .home-li {
+    margin-right: unset;
+  }
+  nav a.active-link {
+    border-bottom: none;
+  }
+
+  
+  
+  #open-sidebar-button {
+    display: block;
+    background: none;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    position: sticky;
+    top: 0;
+    margin-left: auto;
+  }
+
+  #close-sidebar-button {
+    display: block;
+    background: none;
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+  }
+
+  svg {
+    color: black;
+  }
+
+}

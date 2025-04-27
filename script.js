@@ -49,7 +49,7 @@ updateNav(media)
 
 
 // Email
-const user = "BandS";
+const user = "blsignings";
   const domain = "gmail.com";
   const displayText = `${user}@${domain}`;
 

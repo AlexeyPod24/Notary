@@ -55,7 +55,7 @@
 
       nav {
         position: sticky;
-
+        padding: 0 2rem;
         top: 0;
         width: 100%;
         background-color: var(--white);
@@ -69,13 +69,14 @@
       nav ul {
         list-style-type: none;
         display: flex;
+        align-items: center;
       }
       
       nav .home-li {
         margin-right: auto;
       }
 
-      nav a {
+      nav li a {
         display: flex;
         text-decoration: none;
         color: var(--primary-color);
@@ -84,21 +85,28 @@
         font-size: 1.2rem;
       }
 
-      nav a:hover {
+      nav li a:hover {
         background-color: var(--soft-gold);
         color: var(--primary-color);
         transition: ease-in-out .2s;
       }
 
-      nav a.active-link {
+      nav li a.active-link {
         border-bottom: 3px solid var(--primary-color);
       }
 /* We include display flex on nav li here so that there is no gap between active LINK and background color, that is how I solve this */
       nav li {
         display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
-      
+     .phone-button-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 2rem;
+     }
    
 
       section {
@@ -134,7 +142,7 @@
        justify-content: flex-start;
       align-items: center;
       background-color: white;
-      width: 40%;
+      width: 35%;
       text-align: left;
       transition: transform 0.4s ease, box-shadow 0.4s ease;
       padding: 2rem;
@@ -505,6 +513,11 @@ footer {
 /* Media queries */
 
 @media screen and (max-width: 700px) {
+
+  body, html {
+    min-height: 100svh;
+  }
+
   nav {
     position: fixed;
     top: 0;
@@ -516,7 +529,9 @@ footer {
     transition: right 300ms ease-out;
   }
 
- 
+  .phone-button-content {
+  display: none;
+  }
 
 /* We control the opening and closing of the mobile menu with nav.show. Its at -100% by default, when we show this class it puts it back at 0 */
   nav.show {
@@ -530,9 +545,11 @@ footer {
   nav ul {
     width: 100%;
     flex-direction: column;
+    align-items: flex-start;
+
   }
 
-  nav a {
+  nav li a {
     width: 100%;
     padding-left: 2.5em;
   }
@@ -540,7 +557,7 @@ footer {
   nav .home-li {
     margin-right: unset;
   }
-  nav a.active-link {
+  nav li a.active-link {
     border-bottom: none;
   }
 
@@ -561,7 +578,7 @@ footer {
     display: block;
     background: none;
     border: none;
-    padding: 1em;
+    padding-top: 1em;
     cursor: pointer;
   }
 

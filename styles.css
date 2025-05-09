@@ -29,6 +29,7 @@
     min-height: 100vh;
     font-family: var(--body-font);
     scroll-behavior: smooth;
+    overflow-x: hidden;
    
     }
     
@@ -590,8 +591,9 @@ footer {
     border: none;
     padding: 1rem;
     cursor: pointer;
-    position: sticky;
+    position: fixed;
     top: 0;
+    right: 0;
     margin-left: auto;
   }
 
@@ -605,6 +607,13 @@ footer {
 
   svg {
     color: black;
+  }
+
+  .test {
+    background-color: red;
+    width: 100%;
+    padding: 2rem;
+    position: fixed;
   }
 
 }
